@@ -78,6 +78,10 @@ module.exports = {
         // https://github.com/import-js/eslint-plugin-import#typescript
         'import',
       ],
+      extends: [
+        'plugin:import/recommended',
+        'plugin:import/typescript'
+      ],
       parser: "@typescript-eslint/parser",
       parserOptions: {
         project: "./tsconfig.json",
@@ -93,7 +97,9 @@ module.exports = {
         // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
         'import/no-extraneous-dependencies': ['error', {
           'devDependencies': false
-        }]
+        }],
+        // TODO: report error once "require" syntax is removed from the codebase
+        'import/no-commonjs': 0
       },
       settings: {
         // https://github.com/import-js/eslint-plugin-import#typescript
