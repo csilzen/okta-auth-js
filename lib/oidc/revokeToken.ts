@@ -19,8 +19,8 @@ import {
 } from './util/oauth';
 import { btoa } from '../crypto';
 import AuthSdkError from '../errors/AuthSdkError';
+import OktaAuth from '../OktaAuth';
 import {
-  OktaAuth,
   RevocableToken,
   AccessToken,
   RefreshToken

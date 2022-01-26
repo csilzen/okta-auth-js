@@ -10,7 +10,8 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
-import { OktaAuth, IdxOptions, IdxTransactionMeta } from '../types';
+import OktaAuth from '../OktaAuth';
+import { IdxOptions, IdxTransactionMeta } from '../types';
 import { run } from './run';
 import { getFlowSpecification } from './flow';
 

@@ -21,8 +21,8 @@ import {
   ReEnrollAuthenticatorValues,
 } from './remediators';
 import { getFlowSpecification } from './flow';
+import OktaAuth from '../OktaAuth';
 import { 
-  OktaAuth, 
   IdxOptions, 
   IdxTransaction,
 } from '../types';

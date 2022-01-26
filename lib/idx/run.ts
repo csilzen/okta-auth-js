@@ -17,8 +17,8 @@ import { introspect } from './introspect';
 import { remediate, RemediateOptions } from './remediate';
 import { getFlowSpecification, RemediationFlow } from './flow';
 import * as remediators from './remediators';
+import OktaAuth from '../OktaAuth';
 import { 
-  OktaAuth,
   IdxStatus,
   IdxTransaction,
   IdxFeature,

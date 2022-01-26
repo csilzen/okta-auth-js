@@ -11,7 +11,8 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
-import { OktaAuth, IdxTransactionMeta, TransactionMetaOptions, PKCETransactionMeta } from '../types';
+import OktaAuth from '../OktaAuth';
+import { IdxTransactionMeta, TransactionMetaOptions, PKCETransactionMeta } from '../types';
 import { removeNils, warn } from '../util';
 import { createOAuthMeta } from '../oidc';
 

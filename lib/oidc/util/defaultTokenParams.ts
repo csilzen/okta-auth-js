@@ -13,7 +13,8 @@
  *
  */
 import { generateNonce, generateState } from './oauth';
-import { OktaAuth, TokenParams } from '../../types';
+import OktaAuth from '../../OktaAuth';
+import { TokenParams } from '../../types';
 import { isBrowser } from '../../features';
 import { removeNils } from '../../util';
 

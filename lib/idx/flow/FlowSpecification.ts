@@ -1,4 +1,5 @@
-import { OktaAuth, FlowIdentifier } from '../../types';
+import OktaAuth from '../../OktaAuth';
+import { FlowIdentifier } from '../../types';
 import { AuthenticationFlow } from './AuthenticationFlow';
 import { PasswordRecoveryFlow } from './PasswordRecoveryFlow';
 import { RegistrationFlow } from './RegistrationFlow';

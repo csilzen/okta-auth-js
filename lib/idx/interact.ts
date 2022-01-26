@@ -12,7 +12,8 @@
  */
 /* eslint complexity:[0,8] */
 import idx from '@okta/okta-idx-js';
-import { OktaAuth, IdxTransactionMeta } from '../types';
+import OktaAuth from '../OktaAuth';
+import { IdxTransactionMeta } from '../types';
 import { getSavedTransactionMeta, saveTransactionMeta } from './transactionMeta';
 import { getOAuthBaseUrl } from '../oidc';
 import { createTransactionMeta } from '.';

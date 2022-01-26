@@ -22,7 +22,7 @@ jest.mock('lib/features',() => {
   return mocked.features;
 });
 import { getDefaultTokenParams } from '../../../../lib/oidc/util/defaultTokenParams';
-import { OktaAuth } from '../../../../lib/types';
+import { OktaAuth } from '../../../../lib';
 
 describe('getDefaultTokenParams', () => {
   beforeEach(() => {

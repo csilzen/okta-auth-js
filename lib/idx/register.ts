@@ -22,10 +22,10 @@ import {
   SkipValues,
 } from './remediators';
 import { AuthSdkError } from '../errors';
+import OktaAuth from '../OktaAuth';
 import { 
   IdxOptions, 
   IdxTransaction, 
-  OktaAuth, 
   IdxFeature,
 } from '../types';
 

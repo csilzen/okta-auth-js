@@ -11,8 +11,8 @@
  */
 
 
+import OktaAuth from '../OktaAuth';
 import { 
-  OktaAuth,
   IdxOptions,
   IdxTransaction,
   AuthenticatorKey

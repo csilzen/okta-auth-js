@@ -13,24 +13,23 @@
  * See the License for the specific language governing permissions and limitations under the License.
  *
  */
+
 import {
   getOAuthUrls,
   loadFrame,
+  addPostMessageListener,
+  prepareTokenParams,
 } from './util';
-
+import { buildAuthorizeParams } from './endpoints/authorize';
+import { handleOAuthResponse } from './handleOAuthResponse';
 import AuthSdkError from '../errors/AuthSdkError';
-
+import OktaAuth from '../OktaAuth';
 import {
-  OktaAuth,
   TokenParams,
   PopupParams,
   OAuthResponse,
 } from '../types';
 
-import { prepareTokenParams } from './util/prepareTokenParams';
-import { buildAuthorizeParams } from './endpoints/authorize';
-import { addPostMessageListener } from './util';
-import { handleOAuthResponse } from './handleOAuthResponse';
 /*
  * Retrieve an idToken from an Okta or a third party idp
  *

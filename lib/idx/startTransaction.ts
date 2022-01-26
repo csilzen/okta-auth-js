@@ -12,7 +12,8 @@
 
 
 import { run, RunOptions } from './run';
-import { OktaAuth, IdxTransaction } from '../types';
+import OktaAuth from '../OktaAuth';
+import { IdxTransaction } from '../types';
 
 export async function startTransaction(
   authClient: OktaAuth, 

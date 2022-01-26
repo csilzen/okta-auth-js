@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { OAuthTransactionMeta, OktaAuth, PKCETransactionMeta, TokenParams } from '../../types';
+import OktaAuth from '../../OktaAuth';
+import { OAuthTransactionMeta, PKCETransactionMeta, TokenParams } from '../../types';
 import { getOAuthUrls } from './oauth';
 
 export function createOAuthMeta(sdk: OktaAuth, tokenParams: TokenParams): OAuthTransactionMeta | PKCETransactionMeta {

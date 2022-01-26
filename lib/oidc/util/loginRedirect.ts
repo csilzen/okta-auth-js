@@ -12,7 +12,8 @@
  */
 /* global window */
 /* eslint-disable complexity, max-statements */
-import { OktaAuth, OktaAuthOptions } from '../../types';
+import OktaAuth from '../../OktaAuth';
+import { OktaAuthOptions } from '../../types';
 
 export function hasTokensInHash(hash: string): boolean {
   return /((id|access)_token=)/i.test(hash);

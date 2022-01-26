@@ -18,8 +18,8 @@ import {
   getOAuthUrls,
 } from './util/oauth';
 import { AuthSdkError, OAuthError } from '../errors';
+import OktaAuth from '../OktaAuth';
 import {
-  OktaAuth,
   TokenVerifyParams,
   IDToken,
   OAuthResponse,

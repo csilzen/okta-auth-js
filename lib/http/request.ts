@@ -16,7 +16,8 @@
 import { isString, clone, isAbsoluteUrl, removeNils } from '../util';
 import AuthApiError from '../errors/AuthApiError';
 import { STATE_TOKEN_KEY_NAME, DEFAULT_CACHE_DURATION } from '../constants';
-import { OktaAuth, RequestOptions, FetchOptions, RequestData } from '../types';
+import OktaAuth from '../OktaAuth';
+import { RequestOptions, FetchOptions, RequestData } from '../types';
 
 export function httpRequest(sdk: OktaAuth, options: RequestOptions): Promise<any> {
   options = options || {};
