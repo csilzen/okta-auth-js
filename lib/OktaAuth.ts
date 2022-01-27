@@ -722,6 +722,11 @@ class OktaAuth implements SDKInterface, SigninAPI, SignoutAPI {
     return this.hasResponseType('code');
   }
 
+  // OKTA-NUM: backwards compatibility with downstream SDKs expecting okta-auth@<6
+  isInteractionRequired(hashOrSearch?: string): boolean {
+    return this.idx.isInteractionRequired(hashOrSearch);
+  }
+
   // { username, password, (relayState), (context) }
   // signIn(opts: SignInWithCredentialsOptions): Promise<AuthTransaction> {
   //   return postToTransaction(this, '/api/v1/authn', opts);
