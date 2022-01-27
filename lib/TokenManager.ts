@@ -14,8 +14,8 @@ import { removeNils, clone } from './util';
 import { AuthSdkError } from './errors';
 import { isRefreshTokenError, validateToken  } from './oidc/util';
 import { isLocalhost, isIE11OrLess } from './features';
+import { TOKEN_STORAGE_NAME } from './constants';
 import SdkClock from './clock';
-import OktaAuth from './OktaAuth';
 import {
   EventEmitter,
   Token, 
@@ -27,13 +27,14 @@ import {
   isRefreshToken,
   StorageOptions,
   StorageType,
+  OktaAuth,
   StorageProvider,
   TokenManagerErrorEventHandler,
   TokenManagerEventHandler,
   TokenManagerInterface,
   RefreshToken
 } from './types';
-import { REFRESH_TOKEN_STORAGE_KEY, TOKEN_STORAGE_NAME } from './constants';
+import { REFRESH_TOKEN_STORAGE_KEY } from './constants';
 import { TokenService } from './services/TokenService';
 
 const DEFAULT_OPTIONS = {

@@ -11,10 +11,11 @@
  */
 
 import { proceed } from './proceed';
-import OktaAuth from '../OktaAuth';
+
 import { 
   IdxPollOptions,
   IdxTransaction,
+  OktaAuth,
 } from '../types';
 import { getSavedTransactionMeta } from './transactionMeta';
 import { warn } from '../util';

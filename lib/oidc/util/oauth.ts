@@ -13,8 +13,7 @@
 /* eslint-disable complexity, max-statements */
 import { genRandomString, removeTrailingSlash } from '../../util';
 import AuthSdkError from '../../errors/AuthSdkError';
-import OktaAuth from '../../OktaAuth';
-import { CustomUrls } from '../../types';
+import { OktaAuth, CustomUrls } from '../../types';
 
 export function generateState() {
   return genRandomString(64);

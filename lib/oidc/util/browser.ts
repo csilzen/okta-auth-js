@@ -13,7 +13,7 @@
 /* global window, document */
 /* eslint-disable complexity, max-statements */
 import { AuthSdkError } from '../../errors';
-import OktaAuth from '../../OktaAuth';
+import { OktaAuth } from '../../types';
 
 export function addListener(eventTarget, name, fn) {
   if (eventTarget.addEventListener) {

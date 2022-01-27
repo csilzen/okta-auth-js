@@ -45,7 +45,7 @@ function logServerSideMemoryStorageWarning(options: StorageOptions) {
   }
 }
 
-export class StorageManager {
+export default class StorageManager {
   storageManagerOptions: StorageManagerOptions;
   cookieOptions: CookieOptions;
   storageUtil: StorageUtil;

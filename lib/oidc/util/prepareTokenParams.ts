@@ -13,8 +13,7 @@
  */
 import { getWellKnown } from '../endpoints/well-known';
 import { AuthSdkError } from '../../errors';
-import OktaAuth from '../../OktaAuth';
-import { TokenParams } from '../../types';
+import { OktaAuth, TokenParams } from '../../types';
 import { clone } from '../../util';
 import { getDefaultTokenParams } from './defaultTokenParams';
 import { DEFAULT_CODE_CHALLENGE_METHOD } from '../../constants';

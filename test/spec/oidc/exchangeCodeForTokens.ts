@@ -17,7 +17,7 @@ const handleOAuthResponse = jest.fn();
 jest.mock('../../../lib/oidc/handleOAuthResponse', () => { return { handleOAuthResponse }; });
 
 import { exchangeCodeForTokens, getOAuthUrls } from '../../../lib/oidc';
-import { OktaAuth } from '../../../lib';
+import { OktaAuth } from '../../../lib/types';
 
 function mockOktaAuth(): OktaAuth {
   return {

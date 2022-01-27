@@ -14,8 +14,7 @@
 /* eslint-disable complexity, max-statements */
 
 import AuthSdkError from '../../errors/AuthSdkError';
-import OktaAuth from '../../OktaAuth';
-import { TokenVerifyParams, UserClaims } from '../../types';
+import { OktaAuth, TokenVerifyParams, UserClaims } from '../../types';
 
 export function validateClaims(sdk: OktaAuth, claims: UserClaims, validationParams: TokenVerifyParams) {
   var aud = validationParams.clientId;

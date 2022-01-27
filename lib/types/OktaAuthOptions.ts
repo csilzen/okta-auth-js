@@ -10,11 +10,12 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
-import { StorageManagerOptions, StorageUtil, SimpleStorage } from './Storage';
+import { StorageManagerOptions, StorageUtil } from './Storage';
 import { CookieOptions } from './Cookies';
 import { HttpRequestClient } from './http';
 import { AuthState } from './AuthState';
 import { TransactionManagerOptions } from './Transaction';
+import { SimpleStorage } from './Storage';
 import { FlowIdentifier } from '../idx/types';
 import OktaAuth from '../OktaAuth';
 export interface TokenManagerOptions {

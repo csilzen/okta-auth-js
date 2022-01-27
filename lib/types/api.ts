@@ -14,7 +14,13 @@ import { AuthTransaction } from '../tx/AuthTransaction';
 import { Token, Tokens, RevocableToken, AccessToken, IDToken, RefreshToken } from './Token';
 import { JWTObject } from './JWT';
 import { UserClaims } from './UserClaims';
-import { CustomUrls } from './OktaAuthOptions';
+import { CustomUrls, OktaAuthOptions } from './OktaAuthOptions';
+import StorageManager from '../StorageManager';
+import TransactionManager from '../TransactionManager';
+import { TokenManagerInterface } from './TokenManager';
+import { OktaUserAgent } from '../OktaUserAgent';
+import { FlowIdentifier, IdxPollOptions } from '../idx/types';
+
 import { 
   AuthenticationOptions, 
   RegistrationOptions as IdxRegistrationOptions,
@@ -29,14 +35,28 @@ import {
   ChallengeData,
   ActivationData,
   WebauthnEnrollValues,
-  WebauthnVerificationValues,
-  FlowIdentifier, 
-  IdxPollOptions
+  WebauthnVerificationValues
 } from '../idx/types';
 import { InteractOptions, InteractResponse } from '../idx/interact';
 import { IntrospectOptions } from '../idx/introspect';
 import { IdxResponse } from '../idx/types/idx-js';
 import { TransactionMetaOptions } from './Transaction';
+export interface OktaAuth {
+  options: OktaAuthOptions;
+  getIssuerOrigin(): string;
+  getOriginalUri(): string | undefined;
+  
+  _oktaUserAgent: OktaUserAgent;
+  storageManager: StorageManager;
+  transactionManager: TransactionManager;
+  tokenManager: TokenManagerInterface;
+
+  idx: IdxAPI;
+
+  // Browser only
+  features: FeaturesAPI;
+  token: TokenAPI;
+}
 
 export interface APIError {
   errorSummary: string;

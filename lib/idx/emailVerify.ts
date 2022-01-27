@@ -11,7 +11,8 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
-import OktaAuth from '../OktaAuth';
+import { OktaAuth } from '../types';
+
 import CustomError from '../errors/CustomError';
 import { urlParamsToObject  } from '../oidc/util/urlParams';
 

@@ -10,8 +10,11 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
-import OktaAuth from '../OktaAuth';
-import { IdxTransaction } from '../types';
+
+import { 
+  OktaAuth,
+  IdxTransaction,
+} from '../types';
 import { run } from './run';
 import { AuthenticationOptions } from './authenticate';
 import {

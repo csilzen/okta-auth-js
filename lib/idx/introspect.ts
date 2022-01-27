@@ -11,7 +11,7 @@
  */
 
 import idx from '@okta/okta-idx-js';
-import OktaAuth from '../OktaAuth';
+import { OktaAuth } from '../types';
 import { IdxResponse, isRawIdxResponse } from './types/idx-js';
 import { getOAuthDomain } from '../oidc';
 import { IDX_API_VERSION } from '../constants';
