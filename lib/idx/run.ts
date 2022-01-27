@@ -18,7 +18,7 @@ import { remediate, RemediateOptions } from './remediate';
 import { getFlowSpecification, RemediationFlow } from './flow';
 import * as remediators from './remediators';
 import { 
-  OktaAuth,
+  OktaAuthInterface,
   IdxStatus,
   IdxTransaction,
   IdxFeature,
@@ -78,7 +78,7 @@ function getAvailableSteps(idxResponse: IdxResponse): NextStep[] {
 }
 
 export async function run(
-  authClient: OktaAuth, 
+  authClient: OktaAuthInterface, 
   options: RunOptions = {},
 ): Promise<IdxTransaction> {
   let tokens;
